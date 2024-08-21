@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "mybplibrary": {
+      "projectType": "library",
+      "root": "projects/mybplibrary",
+      "sourceRoot": "projects/mybplibrary/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mybplibrary/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mybplibrary/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mybplibrary/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mybplibrary/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "b3ce29e7-13d8-4e30-9ab9-d59b9f521162"
   }
 }
