@@ -9,7 +9,8 @@ import { Component, Input } from '@angular/core';
     <p class="description">{{description}}</p>
     <div class="comments-container">
       <ul>
-        <li>Comments: {{comments}}</li>
+      Comments:
+        <li *ngFor="let item of comments">{{item}}</li>
       </ul>
     </div>
   </div>

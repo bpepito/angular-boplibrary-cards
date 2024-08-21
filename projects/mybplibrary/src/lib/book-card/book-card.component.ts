@@ -11,9 +11,10 @@ import { Component, Input } from '@angular/core';
   `,
   styles: [`
     .book-card { 
-      border: 1px solid #dddddd; 
+      border: 2px solid #1812c9; 
       padding: 16px; 
-      border-radius: 5px; }
+      border-radius: 5px;  
+  }
 
     .book-card h2 {
     font-weight: bold;
